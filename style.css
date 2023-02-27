@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+/* Initial design */
+* {
+  margin: 0;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: Kanit;
+}
+
+.floating{
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes floating{
+  0%{
+    transform: translate(0, 0px);
+  }
+  50%{
+    transform: translate(0, 10px);
+  }
+  100%{
+    transform: translate(0, -10px);
+  }
+}
+
+.floating-4{
+  animation-name: floating;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes floating-4{
+  0%{
+    transform: translate(0, 0px);
+  }
+  50%{
+    transform: translate(0, 10px);
+  }
+  100%{
+    transform: translate(0, -10px);
+  }
+}
