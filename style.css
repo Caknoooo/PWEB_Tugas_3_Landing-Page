@@ -1,9 +1,264 @@
-@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 /* Initial design */
 * {
   margin: 0;
-  padding: 0%;
+  padding: 0;
   box-sizing: border-box;
-  font-family: Kanit;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #000;
+}
+
+section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px 150px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  justify-content: flex-start;
+}
+
+section header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  justify-content: space-between;
+  display: flex;
+  padding: 40px 100px;
+  align-items: center;
+  z-index: 10;
+}
+
+section header .logo {
+  font-size: 1.5em;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+section header .toggle {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  background: url(./img/menu.png);
+  background-size: 30px;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  padding: 5px;
+}
+
+.navbar-toggle {
+  display: none;
+  cursor: pointer;
+}
+
+.toggle-icon {
+  font-size: 2rem;
+}
+
+.navbar-menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-menu li {
+  margin-left: 20px;
+}
+
+.navbar-menu li a {
+  text-decoration: none;
+  color: white;
+  font-size: 15px;
+  margin: 20px;
+}
+
+.navbar-menu li a:hover {
+  color: gray;
+}
+
+@media (max-width: 768px) {
+  .navbar-toggle {
+    display: block;
+  }
+  .navbar-menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    padding: 20px;
+  }
+  .navbar-menu li {
+    margin: 10px 0;
+  }
+}
+
+button {
+  display: flex;
+  align-items: center;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 17px;
+  padding: 0.8em 1.3em 0.8em 0.9em;
+  color: white;
+  background: #ad5389;
+  background: linear-gradient(to right, #05d71a, #40fc85, #06eb1d);
+  border: none;
+  letter-spacing: 0.05em;
+  border-radius: 16px;
+}
+
+button svg {
+  margin-right: 3px;
+  transform: rotate(30deg);
+  transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+button span {
+  transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+button:hover svg {
+  transform: translateX(5px) rotate(90deg);
+}
+
+button:hover span {
+  transform: translateX(7px);
+}
+
+.bg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-position: center;
+}
+
+.bird {
+  position: absolute;
+  bottom: 0;
+  right: 100px;
+  max-height: 800px;
+  z-index: 1000;
+}
+
+.content-section {
+  position: relative;
+  max-width: 600px;
+  left: 100px;
+  z-index: 10;
+}
+
+.content-section h2 {
+  filter: invert(1);
+  font-size: 4em;
+  font-weight: 500;
+  line-height: 2em;
+}
+
+.content-section h2 span {
+  font-size: 3.5em;
+  font-weight: 800;
+  letter-spacing: 5px;
+}
+
+.content-section p {
+  filter: invert(1);
+  margin-top: -10px;
+  margin-bottom: 15px;
+}
+
+/* Sosmed */
+.sosmed-section {
+  position: absolute;
+  top: 30%;
+  right: 0;
+  width: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  flex-direction: column;
+}
+
+.sosmed-section li {
+  list-style: none;
+}
+
+.sosmed-section li a {
+  display: inline-block;
+  transform: scale(0.5);
+}
+
+.sosmed-section li a i:hover {
+  color: gray;
+}
+
+.sosmed-section li a i {
+  font-size: 5em;
+  color: white;
+}
+
+.text-section {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+}
+
+.text-section .text-section-blocks {
+  position: relative;
+  padding: 20px;
+  margin-right: 40px;
+  max-width: 500px;
+  background: rgb(0, 255, 0, 0.2);
+}
+
+.text-section .text-section-blocks:hover {
+  position: relative;
+  padding: 20px;
+  margin-right: 40px;
+  max-width: 500px;
+  background: #383f4a;
+  z-index: 100000;
+  transform: translateY(-50px);
+}
+
+.text-section .text-section-blocks h3 {
+  font-size: 1.5em;
+  filter: invert(1);
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.text-section .text-section-blocks h3:hover {
+  font-size: 1.5em;
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.text-section .text-section-blocks p {
+  font-size: 1em;
+  filter: invert(1);
 }

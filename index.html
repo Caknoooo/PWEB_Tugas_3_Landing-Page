@@ -1,22 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <!-- style -->
-  <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Alpine JS -->
-  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.11.1/dist/cdn.min.js"></script>
+    <!-- Css style -->
+    <link rel="stylesheet" href="style.css" />
 
-  <!-- AOS -->
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    />
 
-  <title>Landing Page</title>
-</head>
-<body>
-  <h1>Hello World</h1>
-</body>
+    <title>Nature Landing Page</title>
+  </head>
+  <body>
+    <section>
+      <header>
+        <a href="" class="logo"> Nature </a>
+        <nav>
+          <div class="navbar-toggle">
+            <span class="toggle-icon"><i class="fas fa-bars"></i></span>
+          </div>
+          <ul class="navbar-menu">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">Service</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <img src="./img/bg.jpg" alt="" class="bg" />
+      <img src="./img/bird.png" alt="" class="bird" />
+
+      <div class="content-section">
+        <h2>We can save the <span>World</span></h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, eius
+          enim eveniet cumque maxime neque sapiente ipsa praesentium, similique
+          doloribus corrupti nisi reiciendis distinctio vitae error, voluptatum
+          eaque autem quasi.
+        </p>
+        <button>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width="24"
+            height="24"
+          >
+            <path fill="none" d="M0 0h24v24H0z"></path>
+            <path
+              fill="currentColor"
+              d="M5 13c0-5.088 2.903-9.436 7-11.182C16.097 3.564 19 7.912 19 13c0 .823-.076 1.626-.22 2.403l1.94 1.832a.5.5 0 0 1 .095.603l-2.495 4.575a.5.5 0 0 1-.793.114l-2.234-2.234a1 1 0 0 0-.707-.293H9.414a1 1 0 0 0-.707.293l-2.234 2.234a.5.5 0 0 1-.793-.114l-2.495-4.575a.5.5 0 0 1 .095-.603l1.94-1.832C5.077 14.626 5 13.823 5 13zm1.476 6.696l.817-.817A3 3 0 0 1 9.414 18h5.172a3 3 0 0 1 2.121.879l.817.817.982-1.8-1.1-1.04a2 2 0 0 1-.593-1.82c.124-.664.187-1.345.187-2.036 0-3.87-1.995-7.3-5-8.96C8.995 5.7 7 9.13 7 13c0 .691.063 1.372.187 2.037a2 2 0 0 1-.593 1.82l-1.1 1.039.982 1.8zM12 13a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"
+            ></path>
+          </svg>
+          <span>Launch</span>
+        </button>
+      </div>
+
+      <ul class="sosmed-section">
+        <li class="sosmed-icon">
+          <a href="https://www.instagram.com/Cakno_00"
+            ><i class="fab fa-instagram"></i
+          ></a>
+        </li>
+        <li class="sosmed-icon">
+          <a href="https://github.com/Caknoooo"
+            ><i class="fab fa-github"></i
+          ></a>
+        </li>
+        <li class="sosmed-icon">
+          <a href="https://web.facebook.com/cakno.comel" target="_blank"
+            ><i class="fab fa-facebook"></i
+          ></a>
+        </li>
+      </ul>
+
+      <div class="text-section">
+        <div class="text-section-blocks">
+          <h3>The right way</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis,
+            iure magni est nulla explicabo cum? In tempora quo voluptates
+            maiores?
+          </p>
+        </div>
+        <div class="text-section-blocks">
+          <h3>How to start in friendly habits</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis,
+            iure magni est nulla explicabo cum? In tempora quo voluptates
+            maiores?
+          </p>
+        </div>
+      </div>
+
+      <script type="text/javascript">
+        document.addEventListener("mousemove", function (e) {
+          const bg = document.querySelector(".bg");
+          const bird = document.querySelector(".bird");
+          const content = document.querySelector(".content-section");
+
+          bg.style.width = 100 + e.pageX / 100 + "%";
+          bg.style.height = 100 + e.pageX / 100 + "%";
+
+          bird.style.right = 100 + e.pageX / 2 + "px";
+          content.style.left = 100 + e.pageX / 4 + "px";
+        });
+
+        const navbarToggle = document.querySelector(".navbar-toggle");
+        const navbarMenu = document.querySelector(".navbar-menu");
+
+        navbarToggle.addEventListener("click", () => {
+          navbarMenu.classList.toggle("active");
+        });
+      </script>
+    </section>
+  </body>
 </html>
