@@ -54,12 +54,14 @@ section header .toggle {
   cursor: pointer;
 }
 
+/* Navbar section */
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   color: #fff;
   padding: 5px;
+  z-index: 100000;
 }
 
 .navbar-toggle {
@@ -112,6 +114,7 @@ nav {
   }
 }
 
+/* Button */
 button {
   display: flex;
   align-items: center;
@@ -143,6 +146,7 @@ button:hover svg {
 
 button:hover span {
   transform: translateX(7px);
+  cursor: pointer;
 }
 
 .bg {
@@ -163,6 +167,7 @@ button:hover span {
   z-index: 1000;
 }
 
+/* Content-section */
 .content-section {
   position: relative;
   max-width: 600px;
@@ -189,7 +194,20 @@ button:hover span {
   margin-bottom: 15px;
 }
 
-/* Sosmed */
+.content-section-animate{
+  animation: move 2s linear infinite;
+}
+
+@keyframes move {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Sosmed section */
 .sosmed-section {
   position: absolute;
   top: 30%;
@@ -198,7 +216,7 @@ button:hover span {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 30px;
+  padding: 40px;
   flex-direction: column;
 }
 
@@ -239,9 +257,9 @@ button:hover span {
   padding: 20px;
   margin-right: 40px;
   max-width: 500px;
-  background: #383f4a;
+  background: #1dbb32;
   z-index: 100000;
-  transform: translateY(-50px);
+  transform: translateY(-10px);
 }
 
 .text-section .text-section-blocks h3 {
@@ -262,3 +280,4 @@ button:hover span {
   font-size: 1em;
   filter: invert(1);
 }
+
